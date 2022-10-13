@@ -1,0 +1,21 @@
+body{
+    background-color: #0f4c81;
+}
+
+.container-login{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.bloque-login{
+    background: #fff;
+    overflow: hidden;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 137px 130px 137px 95px;
+    box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.06);
+    border-radius: 5px;
+}
