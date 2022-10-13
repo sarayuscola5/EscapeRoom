@@ -8,66 +8,43 @@
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <div class="page">
-				<div class="">
-				    <!-- CONTAINER OPEN -->
-					<div class="col col-login mx-auto">
-						<div class="text-center">
-							<img src="../../assets/images/brand/logo.png" class="header-brand-img" alt="">
-						</div>
-					</div>
-					<div class="container-login">
-						<div class="bloque-login">
-							<div class="card-body">
-								<form class="login100-form validate-form">
-									<span class="login100-form-title">
-										Login
-									</span>
-									<div class="wrap-input100 validate-input" data-bs-validate = "Email derrigorreskoa da.">
-										<input class="input100" type="text" name="email" placeholder="Email">
-										<span class="focus-input100"></span>
-										<span class="symbol-input100">
-											<i class="zmdi zmdi-email" aria-hidden="true"></i>
-										</span>
-									</div>
-									<div class="wrap-input100 validate-input" data-bs-validate = "Pasahitza derrigorreskoa da.">
-										<input class="input100" type="password" name="pass" placeholder="Password">
-										<span class="focus-input100"></span>
-										<span class="symbol-input100">
-											<i class="zmdi zmdi-lock" aria-hidden="true"></i>
-										</span>
-									</div>
-									<div class="text-end pt-1">
-										<p class="mb-0"><a href="forgot-password.html" class="text-primary ms-1">Forgot Password?</a></p>
-									</div>
-									<div class="container-login100-form-btn">
-										<a href="index.html" class="login100-form-btn btn-primary">
-											Login
-										</a>
-									</div>
-									<div class="text-center pt-3">
-										<p class="text-dark mb-0">Not a member?<a href="register.html" class="text-primary ms-1">Create an Account</a></p>
-									</div>
-								</form>
-							</div>
-							<div class="card-footer">
-								<div class="d-flex justify-content-center my-3">
-									<a href="" class="social-login  text-center me-4">
-										<i class="fa fa-google"></i>
-									</a>
-									<a href="" class="social-login  text-center me-4">
-										<i class="fa fa-facebook"></i>
-									</a>
-									<a href="" class="social-login  text-center">
-										<i class="fa fa-twitter"></i>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- CONTAINER CLOSED -->
-				</div>
-			</div>
-
+    <div class="page">		
+        <div class="logo">
+            <img src="imagenes/logo.JPG" class="header-brand-img" alt="">
+        </div>
+            <div class="container-login">
+            <div class="bloque-login">
+                <div class="card-body">
+                    <form class="login">
+                        <span class="titulo">
+                            Hasi saioa
+                        </span>
+                        <div>
+                            <span><ion-icon name="person-outline"></ion-icon> Email</span>
+                            <input class="datos" type="text" name="email">
+                        </div>
+                        <br>
+                        <div>
+                            <span><ion-icon name="lock-closed-outline"></ion-icon> Pasahitza</span>
+                            <input class="datos" type="password" name="pass">
+                        </div>
+                        <div>
+                            <p class="mb-0"><a href="recuperarContraseña.html" class="contraseña">Pasahitza ahaztua?</a></p>
+                        </div>
+                        <div class="container-login-btn">
+                            <a href="index.html" class="login-btn">
+                                Sartu
+                            </a>
+                        </div>
+                        <div class="container-registrar">
+                            <p class="registrar">Ez kidea?<a href="registro.html"> Sortu kontu bat</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+	</div>
 </body>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </html>
