@@ -94,3 +94,9 @@ img{
 .registrar a{
     text-decoration: none;
 }
+.container-error{
+    color: rgb(188, 36, 36);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

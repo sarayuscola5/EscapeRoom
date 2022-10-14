@@ -28,11 +28,14 @@
                             <span><ion-icon name="lock-closed-outline"></ion-icon> Pasahitza</span>
                             <input class="datos" id="psw" type="password" name="pass">
                         </div>
+                        <div class="container-error">
+                            <p id="error" hidden>Emaila edo pasahitza txarto daude. <br> Saiatu berriro.</p>
+                        </div>
                         <div>
                             <p class="mb-0"><a href="recuperarContraseña.html" class="contraseña">Pasahitza ahaztua?</a></p>
                         </div>
                         <div class="container-login-btn">
-                            <input type="submit" class="login-btn" value="Sartu" onsubmit="return validacion()">
+                            <input type="submit" class="login-btn" id="btn-enviar" value="Sartu">
                             <!-- <a href="index.html" class="login-btn">
                                 Sartu
                             </a> -->
@@ -40,6 +43,7 @@
                         <div class="container-registrar">
                             <p class="registrar">Ez kidea?<a href="registro.html"> Sortu kontu bat</a></p>
                         </div>
+                        
                     </form>
                 </div>
             </div>
@@ -50,10 +54,10 @@
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 <script>
-    function validacion(){
-        email = document.getElementById("email").value;if(isNaN(email)){return false;}
-        psw = document.getElementById("psw").value;if(isNaN(psw)){return false;}
-        document.write("completa los campos");
+    document.getElementById("btn-enviar").addEventListener("click", validacion())
+    function validacion(evento){
+        email = document.getElementById("email").value;if(!isNaN(email)){return true;}else{evento.preventDefault(), document.getElementById("email").hidden=false}
+        psw = document.getElementById("psw").value;if(!isNaN(psw)){return true;}else{evento.preventDefault(), document.getElementById("email").hidden=false}
     }
 </script>
 </html>
