@@ -10,31 +10,32 @@
 <body>
     <div class="page">		
         <div class="logo">
-            <img src="imagenes/logo.JPG" class="header-brand-img" alt="">
+            <img src="imagenes/logo.JPG" class="header-brand-img">
         </div>
             <div class="container-login">
             <div class="bloque-login">
                 <div class="card-body">
-                    <form class="login">
+                    <form class="login" action="login.php" method="post">
                         <span class="titulo">
                             Hasi saioa
                         </span>
                         <div>
                             <span><ion-icon name="person-outline"></ion-icon> Email</span>
-                            <input class="datos" type="text" name="email">
+                            <input class="datos" id="email" type="text" name="email">
                         </div>
                         <br>
                         <div>
                             <span><ion-icon name="lock-closed-outline"></ion-icon> Pasahitza</span>
-                            <input class="datos" type="password" name="pass">
+                            <input class="datos" id="psw" type="password" name="pass">
                         </div>
                         <div>
                             <p class="mb-0"><a href="recuperarContraseña.html" class="contraseña">Pasahitza ahaztua?</a></p>
                         </div>
                         <div class="container-login-btn">
-                            <a href="index.html" class="login-btn">
+                            <input type="submit" class="login-btn" value="Sartu" onsubmit="return validacion()">
+                            <!-- <a href="index.html" class="login-btn">
                                 Sartu
-                            </a>
+                            </a> -->
                         </div>
                         <div class="container-registrar">
                             <p class="registrar">Ez kidea?<a href="registro.html"> Sortu kontu bat</a></p>
@@ -47,4 +48,12 @@
 </body>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script>
+    function validacion(){
+        email = document.getElementById("email").value;if(isNaN(email)){return false;}
+        psw = document.getElementById("psw").value;if(isNaN(psw)){return false;}
+        document.write("completa los campos");
+    }
+</script>
 </html>
