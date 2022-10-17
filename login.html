@@ -26,7 +26,7 @@
                         <br>
                         <div>
                             <span><ion-icon name="lock-closed-outline"></ion-icon> Pasahitza</span>
-                            <input class="datos" id="psw" type="password" name="pass">
+                            <input class="datos" id="psw" type="password" name="psw">
                         </div>
                         <div class="container-error">
                             <p id="error" hidden>Emaila edo pasahitza txarto daude. <br> Saiatu berriro.</p>
@@ -36,9 +36,6 @@
                         </div>
                         <div class="container-login-btn">
                             <input type="submit" class="login-btn" id="btn-enviar" value="Sartu">
-                            <!-- <a href="index.html" class="login-btn">
-                                Sartu
-                            </a> -->
                         </div>
                         <div class="container-registrar">
                             <p class="registrar">Ez kidea?<a href="registro.html"> Sortu kontu bat</a></p>
@@ -57,12 +54,9 @@
     document.getElementById("btn-enviar").addEventListener("click", validacion);
     function validacion(evento){
         
-        email = document.getElementById("email").value;
-        if(email != ""){return true;}else{evento.preventDefault(), document.getElementById("error").hidden=false}
+        email = document.getElementById("email").value; 
         psw = document.getElementById("psw").value;
-        if(psw != ""){return true;}else{evento.preventDefault(), document.getElementById("error").hidden=false}
-        console.log(email);
-        console.log(psw);
+        if(email != "" && psw != ""){return true;}else{evento.preventDefault(), document.getElementById("error").hidden=false}
     }
 </script>
 </html>
