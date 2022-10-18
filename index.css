@@ -1,0 +1,96 @@
+body{
+    background-color: #fff8e5;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #0d0c22;
+    text-align: left;
+}
+
+.contenedor-filtro{
+    grid-area: filtro;
+    position: relative;
+    height: 30rem;
+    margin-left: 1.5rem;
+    margin-top: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: 15px;
+}
+
+.filtro{
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: block;
+}
+
+.contenedor-libros{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* padding-left: 5%; */
+    grid-area: libros;
+}
+.contenedor{
+    display: grid;
+    grid-template-areas: 
+    'filtro libros libros libros'
+}
+
+.libro{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    flex: 0 0 33.33333333%;
+    max-width: 30%;
+    border-radius: 15px;
+}
+.imagen{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    object-fit: cover;
+    height: 20rem;
+}
+.contenedor-titulo{
+    background: none;
+    padding: 1rem 1.5rem;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    border-bottom: 1px solid #eaedf1;
+    background-color: white;
+}
+.contenedor-titulo2{
+    background: none;
+    padding: 1rem 1.5rem;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    border-bottom: 1px solid #eaedf1;
+    background-color: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.titulo{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.contenedor-info{
+    background-color: white;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+}
