@@ -1,0 +1,61 @@
+.header, footer {
+	background-color: lightgray;
+	width: 100%;
+}
+
+.logo{
+	margin-left: 2%;
+	width: 20%;
+}
+.logo img {
+	width: 25%;
+}
+#buscar {
+	height: 40%;
+}
+.container {
+	width: 100%;
+}
+.texto {
+	width: 35%;
+}
+.añadir {
+	background-color: #0f4c81;
+	color:  #fff8e5;
+}
+.añadir:hover {
+	background-color: #6b9fcd;
+	color: #0f4c81;
+	border: 2px solid #0f4c81;
+}
+.find, .person {
+	color: #0f4c81;
+}
+
+.inputleft {
+	padding-left:35px;
+	height: 2em;
+	/* width: 18em; */
+	border: 2px solid #acacac;
+	border-radius: 0.5em;
+	font-size: 1em;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+	outline: none;
+}
+.inputleft:focus {
+	border: 2px solid #0f4c81;
+}
+
+.iconnameleft {
+	  position: relative;
+	  font-size: 1.3em;
+	  left: 10px;
+	  top: 5px;
+	  color: #7B7B7B;
+	  width: 0;
+}
+
+.perfil {
+	color: #0f4c81;
+}
