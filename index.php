@@ -17,62 +17,89 @@
             </div>
             <div class="filtro">
                 <label class="form-label mt-0">Generoa</label><br>
-                <select name="beast" id="select-beast" class="form-control form-select select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true">
-                    <option value="0">--Select--</option>
-                    <option value="1">Foot wear</option>
-                    <option value="2">Top wear</option>
-                    <option value="3">Bootom wear</option>
-                    <option value="4">Men's Groming</option>
-                    <option value="5">Accessories</option>
+                <select name="Generoa" id="Generoa" class="selector">
+                    <option value='0'>Aukeratu</option>
+                    <?php   
+                    header("Content-Type: text/html;charset=utf-8");
+                    include_once "conexion.php";
+
+                    $consultaGeneros = $miPDO->prepare('SELECT * from generoak;');
+                    $consultaGeneros->execute();
+
+                    $generos = $consultaGeneros->fetchAll();
+
+                    foreach ($generos as $genero => $columna){
+                        echo("
+                        <option value='".$columna['generoKodea']."'>".$columna['izena']."</option>
+                        ");
+                    }
+                    ?>
                 </select>
             </div>
             <div class="filtro">
-                <label class="form-label">Balorazioa</label><br>
-                <select name="beast" id="select-beast1" class="form-control form-select select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true">
-                    <option value="0">--Select--</option>
-                    <option value="1">Western wear</option>
-                    <option value="2">Foot wear</option>
-                    <option value="3">Top wear</option>
-                    <option value="4">Bootom wear</option>
-                    <option value="5">Beuty Groming</option>
-                    <option value="6">Accessories</option>
-                    <option value="7">jewellery</option>
+                <label class="form-label">Nota</label><br>
+                <select name="Nota" id="Nota" class="selector">
+                    <option value="0">Aukeratu</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
                 </select>
             </div>
             <div class="filtro">
                 <label class="form-label">Formatua</label><br>
-                <select name="beast" id="select-beast2" class="form-control form-select select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true">
-                    <option value="0">--Select--</option>
-                    <option value="1">Boys clothing</option>
-                    <option value="2">girls Clothing</option>
-                    <option value="3">Toys</option>
-                    <option value="4">Baby Care</option>
-                    <option value="5">Kids footwear</option>
+                <select name="Generoa" id="Generoa" class="selector">
+                    <option value='0'>Aukeratu</option>
+                    <?php   
+                    
+                    include_once "conexion.php";
+
+                    $consultaFormatos = $miPDO->prepare('SELECT * from formatua;');
+                    $consultaFormatos->execute();
+
+                    $formatos = $consultaFormatos->fetchAll();
+
+                    foreach ($formatos as $formato => $columna){
+                        echo("
+                        <option value='".$columna['formatuKodea']."'>".$columna['izena']."</option>
+                        ");
+                    }
+                    ?>
                 </select>
             </div>
             <div class="filtro">
                 <label class="form-label">Hizkuntza</label><br>
-                <select name="beast" id="select-beast3" class="form-control form-select select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true">
-                    <option value="0">--Select--</option>
-                    <option value="1">Mobiles</option>
-                    <option value="2">Laptops</option>
-                    <option value="3">Gaming &amp; Accessories</option>
-                    <option value="4">Health care Appliances</option>
+                <select name="Hizkuntza" id="Hizkuntza" class="selector">
+                    <option value='0'>Aukeratu</option>
+                    <?php   
+                    
+                    include_once "conexion.php";
+
+                    $consultaHizkuntzak = $miPDO->prepare('SELECT * from hizkuntzak;');
+                    $consultaHizkuntzak->execute();
+
+                    $hizkuntzak = $consultaHizkuntzak->fetchAll();
+
+                    foreach ($hizkuntzak as $hizkuntza => $columna){
+                        echo("
+                        <option value='".$columna['hizkuntzaKodea']."'>".$columna['izena']."</option>
+                        ");
+                    }
+                    ?>
                 </select>
             </div>
-            <a href="javascript:void(0)" class="btn btn-primary d-grid mt-5">Submit</a>
+            <a href="javascript:void(0)" class="btn-filtro">Bilatu</a>
         </div>
 
         <div class="contenedor-libros"> 
         <?php
-        header("Content-Type: text/html;charset=utf-8");
-        $hostDB = '127.0.0.1';
-        $nombreDB = 'igkluba';
-        $usuarioDB = 'root';
-        $password = 'root';
-
-        $hostPDO = "mysql:host=$hostDB;dbname=$nombreDB;";
-        $miPDO = new PDO($hostPDO, $usuarioDB);
+        include_once "conexion.php";
 
         $consultaLibros = $miPDO->prepare('SELECT * from liburuak;');
         $consultaLibros->execute();
@@ -88,7 +115,7 @@
                     </div>
                     <div class='contenedor-info'>
                         <p class='description'>".$columna['sinopsia']."</p>
-                        <a href='#' class='leerMas'>Irakurri gehiago<ion-icon name='chevron-forward-outline'></ion-icon></a>
+                        <a href='#' class='leermas'>Irakurri gehiago <ion-icon name='arrow-redo-outline'></ion-icon></a>
                     </div>
                 </div>
             ");
