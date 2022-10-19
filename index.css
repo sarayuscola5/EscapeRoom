@@ -133,6 +133,9 @@ body{
     padding-left: 1em;
 }
 .leermas{
+    display: flex;
     text-decoration: none;
-    color: #00a19d;
+    color: #0f4c81;
+    justify-content: right;
+    margin-right: 0.5rem;
 }

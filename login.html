@@ -53,7 +53,6 @@
 <script>
     document.getElementById("btn-enviar").addEventListener("click", validacion);
     function validacion(evento){
-        
         email = document.getElementById("email").value; 
         psw = document.getElementById("psw").value;
         if(email != "" && psw != ""){return true;}else{evento.preventDefault(), document.getElementById("error").hidden=false}

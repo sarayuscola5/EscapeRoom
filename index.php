@@ -115,7 +115,7 @@
                     </div>
                     <div class='contenedor-info'>
                         <p class='description'>".$columna['sinopsia']."</p>
-                        <a href='#' class='leerMas'>Irakurri gehiago<ion-icon name='chevron-forward-outline'></ion-icon></a>
+                        <a href='#' class='leermas'>Irakurri gehiago <ion-icon name='arrow-redo-outline'></ion-icon></a>
                     </div>
                 </div>
             ");
