@@ -10,7 +10,7 @@
 <body>
     <div class="page">		
         <div class="logo">
-            <img src="imagenes/logo.JPG" class="header-brand-img">
+            <img src="imagenes/igkluba.png" class="header-brand-img">
         </div>
             <div class="container-login">
             <div class="bloque-login">
@@ -53,7 +53,6 @@
 <script>
     document.getElementById("btn-enviar").addEventListener("click", validacion);
     function validacion(evento){
-        
         email = document.getElementById("email").value; 
         psw = document.getElementById("psw").value;
         if(email != "" && psw != ""){return true;}else{evento.preventDefault(), document.getElementById("error").hidden=false}
